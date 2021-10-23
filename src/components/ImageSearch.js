@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 
 const ImageSearch = ({ searchText }) => {
-	const [text, setText] = useState('');
+	const inputRef = useRef();
 
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
 
-		searchText(text);
+		searchText(inputRef.current.value);
+		inputRef.current.value = '';
 	};
 
 	return (
@@ -17,7 +18,7 @@ const ImageSearch = ({ searchText }) => {
 						className='appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none'
 						type='text'
 						placeholder='Search images...'
-						onChange={(e) => setText(e.target.value)}
+						ref={inputRef}
 					/>
 					<button
 						className='flex-shrink-0 rounded bg-blue-500

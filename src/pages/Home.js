@@ -11,7 +11,7 @@ const Home = () => {
 
 	return (
 		<main>
-			<ImageSearch searchText={(text) => setTerm((prevTerm) => text)} />
+			<ImageSearch searchText={setTerm} />
 
 			{!isLoading && images.length === 0 && (
 				<p className='text-6xl text-center mx-auto mt-32'>No Images Found</p>
