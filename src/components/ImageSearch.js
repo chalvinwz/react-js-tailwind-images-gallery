@@ -13,7 +13,7 @@ const ImageSearch = ({ searchText }) => {
 	return (
 		<section className='border px-2 max-w-sm rounded-lg overflow-hidden my-10 mx-auto'>
 			<form onSubmit={handleOnSubmit} className='w-full max-w-sm'>
-				<div className='flex items-center border-b border-b-2 border-teal-500 py-2'>
+				<div className='flex items-center border-b-2 border-teal-500 py-2'>
 					<input
 						className='appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none'
 						type='text'
